@@ -9,7 +9,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ARG APT_LINK=http://ftp.riken.jp/Linux/ubuntu/
 RUN sed -i "s-$(cat /etc/apt/sources.list | grep -v "#" | cut -d " " -f 2 | grep -v "security" | sed "/^$/d" | sed -n 1p)-${APT_LINK}-g" /etc/apt/sources.list
 
-# ターミナルで日本語の出力を可能にするための設定
 RUN apt-get update\
 	&& apt-get install -y \
 	android-tools-adb \
