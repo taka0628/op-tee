@@ -19,7 +19,7 @@ clean:
 
 # キャッシュ有りでビルド
 build:
-	DOCKER_BUILDKIT=1 docker image build -t ${NAME} \
+	DOCKER_BUILDKIT=1 docker image build -t ${NAME}
 	make _postBuild -s
 
 # キャッシュを使わずにビルド
