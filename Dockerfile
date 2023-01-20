@@ -60,4 +60,6 @@ RUN mkdir optee-qemu && cd optee-qemu \
 RUN cd optee-qemu/build\
 	&& make toolchains -j4
 
+RUN pip install cryptography
+
 RUN	make run
